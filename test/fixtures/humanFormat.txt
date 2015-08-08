@@ -1,0 +1,15 @@
+
+[34m[1mtest/fixtures/chalk.js[22m[39m
+  originalSize: 3.15 kB
+  uglifiedSize: 1.6 kB
+  gzippedSize: 710 B
+
+[34m[1mtest/fixtures/co.js[22m[39m
+  originalSize: 5.04 kB
+  uglifiedSize: 1.86 kB
+  gzippedSize: 752 B
+
+[34m[1mtest/fixtures/glob.js[22m[39m
+  originalSize: 18.63 kB
+  uglifiedSize: 8.23 kB
+  gzippedSize: 2.75 kB

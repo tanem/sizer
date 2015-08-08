@@ -1,0 +1,31 @@
+{
+  "name": "sizer",
+  "version": "1.0.0",
+  "description": "Generate a report of the original, uglified, and gzipped sizes of a set of JavaScript files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --harmony ./node_modules/.bin/tape test/helpers/globals.js test/**/*.test.js"
+  },
+  "author": {
+    "name": "Tane Morgan",
+    "url": "http://github.com/tanem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tanem/sizer.git"
+  },
+  "homepage": "https://github.com/tanem/sizer",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.0",
+    "co": "^4.6.0",
+    "glob": "^5.0.14",
+    "pretty-bytes": "^2.0.1",
+    "promise": "^7.0.3",
+    "ramda": "^0.17.1",
+    "uglify-js": "^2.4.24"
+  },
+  "devDependencies": {
+    "tape": "^4.0.2"
+  }
+}
