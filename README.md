@@ -4,6 +4,10 @@
 
 Generate a report of the original, uglified, and gzipped sizes of a set of JavaScript files.
 
+## Requirements
+
+- Node.js version 0.11.x (for the `harmony` flag which exposes [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)).
+
 ## Installation
 
 ```
@@ -24,6 +28,8 @@ sizer({
   }
 });
 ```
+
+![](https://raw.github.com/tanem/sizer/master/screenshot.png)
 
 ## API
 

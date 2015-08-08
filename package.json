@@ -6,6 +6,9 @@
   "scripts": {
     "test": "node --harmony ./node_modules/.bin/tape test/helpers/globals.js test/**/*.test.js"
   },
+  "engines": {
+    "node": ">= 0.11.0"
+  },
   "author": {
     "name": "Tane Morgan",
     "url": "http://github.com/tanem"
