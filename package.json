@@ -2,9 +2,13 @@
   "name": "sizer",
   "version": "1.0.1",
   "description": "Generate a report of the original, uglified, and gzipped sizes of a set of JavaScript files.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "node --harmony ./node_modules/.bin/tape test/helpers/globals.js test/**/*.test.js"
+    "clean": "rm -rf dist/",
+    "compile-src": "npm run clean && babel --optional runtime src/ -d dist/src/ && babel index.es6 -d dist/",
+    "compile": "npm run clean && npm run compile-src && babel -D test/ -d dist/test/",
+    "test": "npm run compile && node --harmony ./node_modules/.bin/tape dist/test/helpers/globals.js dist/test/**/*.test.js",
+    "preinstall": "npm run compile-src"
   },
   "engines": {
     "node": ">= 0.11.0"
@@ -20,6 +24,7 @@
   "homepage": "https://github.com/tanem/sizer",
   "license": "MIT",
   "dependencies": {
+    "babel-runtime": "^5.8.20",
     "chalk": "^1.1.0",
     "co": "^4.6.0",
     "glob": "^5.0.14",
@@ -29,6 +34,7 @@
     "uglify-js": "^2.4.24"
   },
   "devDependencies": {
+    "babel": "^5.8.21",
     "tape": "^4.0.2"
   }
 }
