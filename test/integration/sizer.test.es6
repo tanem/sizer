@@ -1,17 +1,17 @@
 'use strict';
 
-var test = require('tape');
-var sizer = requireSource('sizer');
+import test from 'tape';
+import sizer from '../..';
 
-test('should generate a json report by default', function (t) {
+test('should generate a json report by default', (t) => {
 
   t.plan(2);
 
-  var expected = readFixture('jsonFormat.json');
+  let expected = readFixture('jsonFormat.json');
 
   sizer({
     glob: 'test/fixtures/{chalk,co,glob}.js',
-    done: function(error, result){
+    done: (error, result) => {
       t.equal(null, error, 'error should be null');
       t.deepEqual(result, expected, 'result should equal jsonFormat.json');
     }
@@ -19,16 +19,16 @@ test('should generate a json report by default', function (t) {
 
 });
 
-test('should generate a human report', function (t) {
+test('should generate a human report', (t) => {
 
   t.plan(2);
 
-  var expected = readFixture('humanFormat.txt');
+  let expected = readFixture('humanFormat.txt');
 
   sizer({
     glob: 'test/fixtures/{chalk,co,glob}.js',
     format: 'human',
-    done: function(error, result){
+    done: (error, result) => {
       t.equal(null, error, 'error should be null');
       t.deepEqual(result, expected, 'result should equal humanFormat.txt');
     }
