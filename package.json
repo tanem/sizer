@@ -8,7 +8,7 @@
     "compile-src": "npm run clean && babel --optional runtime src/ -d dist/src/ && babel index.es6 -d dist/",
     "compile": "npm run clean && npm run compile-src && babel -D test/ -d dist/test/",
     "test": "npm run compile && node --harmony ./node_modules/.bin/tape dist/test/helpers/globals.js dist/test/**/*.test.js",
-    "preinstall": "npm run compile-src"
+    "postinstall": "npm run compile-src"
   },
   "engines": {
     "node": ">= 0.11.0"
