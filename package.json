@@ -1,6 +1,6 @@
 {
   "name": "sizer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Generate a report of the original, uglified, and gzipped sizes of a set of JavaScript files.",
   "main": "dist/index.js",
   "scripts": {
