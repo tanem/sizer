@@ -1,6 +1,7 @@
 # sizer
 
 [![Build Status](https://travis-ci.org/tanem/sizer.png?branch=master)](https://travis-ci.org/tanem/sizer)
+[![Dependency Status](https://david-dm.org/tanem/sizer.png)](https://david-dm.org/tanem/sizer)
 
 Generate a report of the original, uglified, and gzipped sizes of a set of JavaScript files.
 
