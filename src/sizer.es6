@@ -1,5 +1,3 @@
-'use strict';
-
 import Promise from 'promise';
 import co from 'co';
 import glob from 'glob';

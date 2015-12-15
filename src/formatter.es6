@@ -1,5 +1,3 @@
-'use strict';
-
 import R from 'ramda';
 import chalk from 'chalk';
 
