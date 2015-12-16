@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf dist/",
-    "compile-src": "npm run clean && babel --optional runtime src/ -d dist/src/ && babel index.es6 -d dist/",
+    "compile-src": "npm run clean && babel --optional runtime src/ -d dist/src/ && babel index.js -d dist/",
     "compile": "npm run clean && npm run compile-src && babel -D test/ -d dist/test/",
     "test": "npm run compile && node --harmony ./node_modules/.bin/tape dist/test/helpers/globals.js dist/test/**/*.test.js",
     "postinstall": "npm run compile-src"
